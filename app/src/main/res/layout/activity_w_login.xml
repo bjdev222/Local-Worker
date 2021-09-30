@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".WLoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Login"
+        android:layout_above="@+id/cc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:textSize="35sp"
+        android:fontFamily="@font/gb"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"></TextView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/cc"
+
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/idEdtPhoneNumberll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/idEdtPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/gr"
+                    android:hint="Enter Phone Number : "
+
+
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColorHint="@color/black"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <!--Edittext for getting users phone number-->
+
+
+            <!--Button for getting OTP-->
+            <Button
+                android:id="@+id/idBtnGetOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/idEdtPhoneNumberll"
+                android:layout_margin="10dp"
+                android:background="@color/colorPrimary"
+                android:text="Get OTP"
+                android:textAllCaps="false" />
+
+            <!--Edittext for getting otp from user-->
+
+            <RelativeLayout
+                android:id="@+id/otpll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+
+                android:layout_below="@+id/idBtnGetOtp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/idEdtOtpll"
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/idEdtOtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/gr"
+                        android:hint="Enter six digits OTP  : "
+
+
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:textColorHint="@color/black"></com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--button for verifying user OTP-->
+                <Button
+                    android:id="@+id/idBtnVerify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/idEdtOtpll"
+                    android:layout_margin="10dp"
+                    android:background="@color/colorPrimary"
+                    android:text="Verify OTP"
+                    android:textAllCaps="false" />
+
+
+                <TextView
+                    android:id="@+id/resend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/idBtnVerify"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/gr"
+                    android:text="Resend"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+
+                    android:textSize="15sp"></TextView>
+
+                <TextView
+                    android:id="@+id/resendInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/resend"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/gr"
+                    android:text="Resend Info"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"></TextView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

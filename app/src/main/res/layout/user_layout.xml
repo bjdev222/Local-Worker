@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="0.70"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="Bhavik Jinjala"
+                    android:textSize="22sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gb"
+
+                    android:id="@+id/name"
+                    android:layout_margin="5dp"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="(work)"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gb"
+
+                    android:id="@+id/work"
+                    android:layout_margin="5dp"
+                    android:maxLines="1"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/rating"
+                    android:text="4.5 Rating"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/gsm"
+                    android:textSize="14sp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/address"
+                    android:text="Surat gujarat"
+                    android:maxLines="1"
+                    android:fontFamily="@font/gr"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content"></TextView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_weight="0.30"
+                android:layout_margin="5dp"
+                android:id="@+id/profileImagell"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profileImage"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/profile"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#FF000000"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
